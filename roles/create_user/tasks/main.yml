@@ -1,0 +1,9 @@
+---
+  - name: "Create user {{ USER_TRAY }} account"
+    user:
+      name: "{{ USER_TRAY }}"
+      groups: "sudo"
+      shell: "/bin/bash"
+      password: "{{ USER_TRAY_PASS }}"
+      append: "yes"
+    become: yes

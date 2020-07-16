@@ -1,0 +1,20 @@
+---
+  - name: 'Install   APP  from  GIT '
+    git:
+      repo: "{{ REPO }}"
+      dest: "{{ DEST }}"
+      clone: yes
+      update: yes
+      force: yes
+  - name: 'Fix bugs  1/2'
+    template:
+      src: 'templates/index.php.j2'
+      dest: '{{ DEST }}/index.php'
+    become: yes
+  - name: 'Fix bugs  2/2'
+    template:
+      src: 'templates/htaccess.j2'
+      dest: '{{ DEST }}/.htaccess'
+    become: yes
+    notify:
+      - restart apache

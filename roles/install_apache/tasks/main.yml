@@ -1,0 +1,28 @@
+---
+  - name: 'Install  Apache'
+    apt:
+      update_cache: yes 
+      name: "{{ item }}"
+      state: present
+    become: yes
+    tags:
+      - packages
+    with_items:
+      - apache2
+  - name: 'Enable service Apache'
+    service:
+      name: apache2
+      enabled: yes
+  - name: "Enable module mod_rewrite 1/2 "
+    command:
+      chdir: "/etc/apache2/mods-available/"
+      cmd: "a2enmod rewrite"
+    become: yes
+  - name: "Enable module mod_rewrite 2/2 "
+    template:
+      src: 'templates/apache2.conf.j2'
+      dest: '/etc/apache2/apache2.conf'
+    become: yes    
+    notify:
+      - restart apache
+

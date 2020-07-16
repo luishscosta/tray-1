@@ -1,0 +1,3 @@
+---
+DEST: /var/www/html/perguntas
+REPO: https://github.com/luishscosta/prova-devops.git

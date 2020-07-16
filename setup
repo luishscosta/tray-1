@@ -1,0 +1,13 @@
+#!/bin/bash
+echo "Welcome $USER ,  please type your password. "
+sleep 2
+
+# Update  System  and  install  ansible 
+echo "Update  System  and  install  ansible"
+sleep 5 
+sudo apt-get update ; sudo apt-get  install  ansible git  python  python-pip -y
+
+# Running  playbook
+echo "Running  Ansible  Playbook - PLEASE WAIT !!! "
+sleep 5
+sudo ansible-playbook -i hosts -u $USER  provisioner.yml 

@@ -1,0 +1,13 @@
+---
+  - name: 'Install  PHP'
+    apt:
+      update_cache: yes 
+      name: "{{ item }}"
+      state: present
+    become: yes
+    tags:
+      - packages
+    with_items:
+      - php
+    notify:
+      - restart apache

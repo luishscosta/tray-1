@@ -1,0 +1,7 @@
+---
+  - name: 'Upgrade  packages - PLEASE WAIT !!!'
+    apt:
+      update_cache: yes
+      upgrade: yes 
+    become: yes
+

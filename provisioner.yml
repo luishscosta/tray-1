@@ -1,0 +1,9 @@
+---
+  - hosts: ubuntu
+    connection: local
+    roles:
+      - upgrade_packs
+      - create_user
+      - install_apache
+      - install_php
+      - install_app
