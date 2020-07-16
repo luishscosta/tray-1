@@ -37,29 +37,29 @@
 Durante a execução do  desafio percebi  que mesmo ao subir todos serviços e colocar os  arquivos na  pasta correta do Apache  a  aplicação  apresentava  erro.
 
 
-![enter image description here](https://github.com/rhoribe/tray2/blob/master/images/erro_pagina.png?raw=true)
+![enter image description here](https://github.com/rhoribe/tray/blob/master/images/erro_pagina.png?raw=true)
 
 Analisando os logs do  apache  verifiquei que existia  um possível  erro de sintaxe no arquivo 'index.php'
 
-![enter image description here](https://github.com/rhoribe/tray2/blob/master/images/log.png?raw=true)
+![enter image description here](https://github.com/rhoribe/tray/blob/master/images/log.png?raw=true)
 
 Olhando o código   consegui encontrar  dois erros , sendo  que  falta um ';' e um '}'
 
-![enter image description here](https://github.com/rhoribe/tray2/blob/master/images/erro.png?raw=true)
+![enter image description here](https://github.com/rhoribe/tray/blob/master/images/erro.png?raw=true)
 
 Código corrigido:
 
-![enter image description here](https://github.com/rhoribe/tray2/blob/master/images/corre%C3%A7%C3%A3o.png?raw=true)
+![enter image description here](https://github.com/rhoribe/tray/blob/master/images/corre%C3%A7%C3%A3o.png?raw=true)
 
 Feitas as correções a  pagina  abriu, porém com  uma 'charada'
 
-![enter image description here](https://github.com/rhoribe/tray2/blob/master/images/parametro.png?raw=true)
+![enter image description here](https://github.com/rhoribe/tray/blob/master/images/parametro.png?raw=true)
 
 Olhando o código do arquivo 'index.php' encontrei a  seguinte  estrutura :
 
-![enter image description here](https://github.com/rhoribe/tray2/blob/master/images/tela2.png?raw=true)
+![enter image description here](https://github.com/rhoribe/tray/blob/master/images/tela2.png?raw=true)
 
 Entendo a  lógica cheguei no  resultado : **45**,  após isso  bastou acessar a URL passando o  parâmetro correto e a pagina abriu .
-![enter image description here](https://github.com/rhoribe/tray2/blob/master/images/sucesso.png?raw=true) 
+![enter image description here](https://github.com/rhoribe/tray/blob/master/images/sucesso.png?raw=true) 
 
 Obs:  As respostas  da questões  estão no  diretório **'respostas**'
